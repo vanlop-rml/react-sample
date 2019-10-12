@@ -33,12 +33,12 @@ class App extends Component {
       <div>
         <Header />
 
-        <Route path="/users" component={() => (
+        <Route exact path="/users" component={() => (
             <Request url="https://jsonplaceholder.typicode.com/users">
                 {(data)=> <User data={data}/> }
             </Request>
         )}></Route>
-        <Route path="/posts" component={() => (
+        <Route exact path="/posts" component={() => (
             <Request url="https://jsonplaceholder.typicode.com/posts">
                 {(data)=> <Post data={data}/> }
             </Request>
