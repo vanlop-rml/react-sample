@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import User from '../pages/User'
 import Post from '../pages/Post'
-import Request from './lib/Request'
+import Request from '../lib/Request'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 

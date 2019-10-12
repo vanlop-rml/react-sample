@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './App.css';
 import Header from './component/Header'
+import Content from './component/Content'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
