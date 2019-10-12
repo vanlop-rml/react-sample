@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-import axios from 'axios'
-import withRequest from '../lib/withRequest'
-
 
 class User extends Component {
    
@@ -12,6 +9,7 @@ class User extends Component {
     render() {
         return (
             <div>
+                <div className="container">
                 <table>
                     <thead>
                         <tr>
@@ -33,7 +31,7 @@ class User extends Component {
                  )}
                     </tbody>
                 </table>
-               
+            </div>
             </div>
         )
     }

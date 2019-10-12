@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import axios from 'axios'
-import withRequest from '../lib/withRequest'
+
 
 
 class Post extends Component {
@@ -12,6 +11,7 @@ class Post extends Component {
     render() {
         return (
             <div>
+                <div className="containter-fluid">
                 <table>
                     <thead>
                         <tr>
@@ -35,7 +35,7 @@ class Post extends Component {
                     )}
                     </tbody>
                 </table>
-               
+                </div>
             </div>
         )
     }

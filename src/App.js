@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-// import logo from './logo.svg';
+import logo from './logo.svg';
 import './App.css';
-import User from './user/User'
-import Post from './post/Post'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import Request from './lib/Request'
+import Header from './component/Header'
+// import User from './pages/User'
+// import Post from './pages/Post'
+import Content from './component/Content'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 
@@ -22,25 +23,19 @@ class App extends Component {
 
   render(){ 
     const {name} = this.state
+    
+    const myStyle = {
+        fontSize: 20,
+        color: '#ff0000',
+        fontWeight: 'bold'
+    }
 
-    return <div>
-      <div>Hello { name }</div>
+    return(
       <div>
-        <Link to="/">Home</Link>
-        <Link to="/users">Users</Link>
-        <Link to="/posts">Posts</Link>
-      </div>
-      <Route path="/users" component={() => (
-        <Request url="https://jsonplaceholder.typicode.com/users">
-            {(data)=> <User data={data}/> }
-        </Request>
-      )}></Route>
-      <Route path="/posts" component={() => (
-        <Request url="https://jsonplaceholder.typicode.com/posts">
-            {(data)=> <Post data={data}/> }
-        </Request>
-      )}></Route>
-    </div>;
+        <Header />
+        <Content />   
+    </div>
+    )
   }
 }
 
