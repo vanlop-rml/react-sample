@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-import logo from './logo.svg';
 import './App.css';
 import Header from './component/Header'
-// import User from './pages/User'
-// import Post from './pages/Post'
-import Content from './component/Content'
+import User from './pages/User'
+import Post from './pages/Post'
+import Request from './lib/Request'
 import 'bootstrap/dist/css/bootstrap.min.css'
-
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 
 class App extends Component {
@@ -33,7 +32,18 @@ class App extends Component {
     return(
       <div>
         <Header />
-        <Content />   
+
+        <Route path="/users" component={() => (
+            <Request url="https://jsonplaceholder.typicode.com/users">
+                {(data)=> <User data={data}/> }
+            </Request>
+        )}></Route>
+        <Route path="/posts" component={() => (
+            <Request url="https://jsonplaceholder.typicode.com/posts">
+                {(data)=> <Post data={data}/> }
+            </Request>
+        )}></Route>
+
     </div>
     )
   }

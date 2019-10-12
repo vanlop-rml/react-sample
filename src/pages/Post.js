@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
 
-
 class Post extends Component {
 
     onChange = event => {
@@ -11,7 +10,7 @@ class Post extends Component {
     render() {
         return (
             <div>
-                <div className="containter-fluid">
+                <div className='container'>
                 <table>
                     <thead>
                         <tr>
